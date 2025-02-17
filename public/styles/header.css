@@ -1,0 +1,31 @@
+.nav-wlist-btn {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: var(--color-light-pink) !important;
+     border: none !important;
+     border-radius: 50% !important;
+     width: 50px !important;
+     height: 50px !important;
+     cursor: pointer;
+     font-size: 25px;
+
+}
+.nav-cart-custoom{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 5px;
+     width: 200px;
+     height: 50px;
+     border-radius: 10px;
+     border: none;
+     background-color: var(--color-light-blue);
+     cursor: pointer;
+     font-size: 20px;
+}
+.header-search{
+     height: 50px !important;
+     background-color: var(--color-light-blue) !important;
+     border: none !important;
+}

@@ -1,0 +1,41 @@
+:root {
+    --color-light-blue: #ddf0ff;
+    --color-light-pink: #ffc0c0;
+    --color-light-green: #b2ffb5;
+    --color-light-black: #7e7e7e;
+
+    --color-bright-blue: #0092ff;
+    --color-bright-red: #ff8989;
+
+    --12-px: 0.75rem;
+    --14-px: 0.875rem;
+    --16-px: 1rem;
+    --18-px: 1.125rem;
+    --24-px: 1.5rem;
+    --26-px: 1.625rem;
+    --30-px: 1.875rem;
+    --32-px: 2rem;
+    --48-px: 3rem;
+
+    --base-font: 'Poppins','Noto Serif Sinhala', sans-serif;
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--base-font);
+}
+
+.hover-black:hover {
+    background-color: black !important;
+    color: white !important;
+    transition: all 300ms ease !important;
+}
+
+.red-border{
+    border: 2px solid red;
+}
+.yellow-border{
+    border: 2px solid yellow;
+}
