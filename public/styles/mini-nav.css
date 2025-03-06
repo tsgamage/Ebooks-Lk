@@ -9,4 +9,9 @@
     background-color: var(--color-light-blue);
     gap: 5px;
     text-transform: uppercase;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
 }

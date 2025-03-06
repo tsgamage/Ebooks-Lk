@@ -27,13 +27,28 @@ app.use(express.static("public"));
 app.get("/", async (req, res) => {
   try {
     const result = await db.query("SELECT * FROM book");
-    res.render("index.ejs", { books: result.rows });
+    res.render("index.ejs", { books: result.rows, authorized: false });
   } catch {
     console.log("Error while fetching data for books");
     res.render("index.ejs");
   }
 });
 
+app.get("/login", async (req, res) => {
+  res.render("login.ejs");
+})
+
+app.get("/register", async (req, res) => {
+  res.render("register.ejs");
+})
+
+app.get("/all", async (req, res) => {
+  res.render("all.ejs");
+});
+
+app.get("/authors", async (req, res) => {
+  res.render("authors.ejs");
+});
 
 app.listen(3000, () => {
   console.log(`Server running at http://localhost:${port}`);
