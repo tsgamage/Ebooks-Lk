@@ -19,14 +19,33 @@
                 </nav>
                 <!-- Path Showing Thing End -->
                 <%- include("partials/caresol.ejs") %>
-                    <div class="container">
+                    <div class="container mt-3">
                         <div class="row">
-                            <!-- card here -->
+                            <!-- card starts here -->
+                            <% if(locals.books){ for (let i=0; i < books.length; i++) {%>
+                                <div class="card me-4" style="width: 18rem;" id=<%=books[i].id %>>
+                                    <img src="/images/site/dimo2-book.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <%=books[i].title%>
+                                        </h5>
+                                        <p class="card-text">Rs.<%= books[i].price %>
+                                        </p>
+                                        <a href="#" class="btn btn-primary">Buy Now</a>
+                                    </div>
+                                </div>
+                                <% }} else { %>
+                                    <p style="margin-top: 20px;">
+                                        <center>No books available</center>
+                                    </p>
+                                    <% } %>
+
+                            <!-- card ends here -->
+
                         </div>
                     </div>
             </div>
         </div>
-    </div>
 
-    <%- include("partials/offcanvas.ejs") %>
-        <%- include("partials/footer.ejs") %>
+        <%- include("partials/offcanvas.ejs") %>
+            <%- include("partials/footer.ejs") %>
