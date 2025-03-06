@@ -42,17 +42,26 @@
                 </button>
                 <!-- Profile-btn  -->
                 <div class="flex-shrink-0 dropdown">
-                    <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="/images/user/dimo-user.png" alt="mdo" width="32" height="32" class="rounded-circle">
-                    </a>
-                    <ul class="dropdown-menu text-small shadow" id="profileDropDown">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item text-danger" href="#">Sign out</a></li>
-                    </ul>
+                    <% if(locals.authorized){ %>
+                        <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/images/user/dimo-user.png" alt="mdo" width="32" height="32"
+                                class="rounded-circle">
+                        </a>
+                        <%}else{%>
+                            <a href="/login" class="d-block link-body-emphasis text-decoration-none"
+                                aria-expanded="false">
+                                <img src="/images/user/blank-user.jpg" alt="User" width="32" height="32"
+                                    class="rounded-circle">
+                            </a>
+                            <%}%>
+                                <ul class="dropdown-menu text-small shadow" id="profileDropDown">
+                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item text-danger" href="#">Sign out</a></li>
+                                </ul>
                 </div>
             </div>
         </div>
