@@ -19,7 +19,6 @@ $(document).ready(function () {
       },
     },
 
-
     // messages: {
     //     name:{
     //         required: "Enter your name"
@@ -38,22 +37,24 @@ $(document).ready(function () {
     //   },
     // },
 
-
     // submitHandler: function(form) {
     //     alert("Form submitted successfully");
     //     form.submit(); // this will send the form if everything is correct
     // }
   });
+
+  $("#login").validate({
+    rules: {
+      email: {
+        required: true,
+        email: true,
+      },
+    },
+  });
+
+  $("#register, #login").on("input", () => {
+    document.querySelectorAll(".error-message").forEach((element) => {
+      element.classList.add("d-none");
+    });
+  });
 });
-
-$(document).ready($("#register").on("input",()=>{
-    document.querySelectorAll(".error-message").forEach((element)=>{
-        element.classList.add("d-none")
-    })
-}))
-
-$(document).ready($("#login").on("input",()=>{
-    document.querySelectorAll(".error-message").forEach((element)=>{
-        element.classList.add("d-none")
-    })
-}))
