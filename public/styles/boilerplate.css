@@ -39,3 +39,7 @@ body{
 .yellow-border{
     border: 2px solid yellow;
 }
+.error-message {
+    color: red;
+    font-size: 14px;
+  }
